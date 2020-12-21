@@ -1,8 +1,7 @@
 import streamlit as st
-
-import sys
-sys.path.append('/home/henri/Documents/Post Lighthouse-Lab work/streamlitWebsiteCVProject/projects')
-from customPandas import *
+import sys, os
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../projects'))
+sys.path.append(lib_path)
 
 def app():
     st.header('Completed Work')

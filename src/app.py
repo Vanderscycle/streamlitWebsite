@@ -1,9 +1,11 @@
 import streamlit as st
-import sys
-sys.path.append('/home/henri/Documents/Post Lighthouse-Lab work/streamlitWebsiteCVProject/projects')
+import sys, os
+# not entirely sure why but this work (adding relative path)
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../projects'))
+sys.path.append(lib_path)
 #if the file was in the same location as this one we don't need to append the path
 from customPandas import *
-#importing pages
+#importing pages for the sidebar
 import cv
 import projects
 import contact

@@ -1,6 +1,10 @@
 import streamlit as st
 from PIL import Image
 
+import sys, os
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../images'))
+sys.path.append(lib_path)
+#print(lib_path)
 def app():
     # Online footprint
     # Not the most beautiful wayto list
@@ -13,5 +17,5 @@ def app():
     st.write('Phone: 1 250 886 5099')
     st.write('Home city: Victoria, BC, Canada')
     
-    image = Image.open('/home/henri/Documents/Post Lighthouse-Lab work/streamlitWebsiteCVProject/images/bio.jpg')
+    image = Image.open(f'{lib_path}/bio.jpg')
     st.image(image, caption='When not coding or learning, I spend time with my lovely wife savoring coffee',use_column_width=True)

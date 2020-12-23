@@ -9,7 +9,7 @@ from customPandas import *
 import cv
 import projects
 import contact
-
+# docker run --name website -d -p 5001:8051 -e PORT=8051 streamlit-skill-display:latest
 
 def helloworld():
     st.title('Henri Vandersleyen, P.eng')
